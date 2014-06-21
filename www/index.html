@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="www/stylesheet.css">
+        <script type="text/javascript" src="smoothie.js"></script>
+	    <script type="text/javascript">
+
+	      // Randomly add a data point every 500ms
+	      var random = new TimeSeries();
+	      setInterval(function() {
+		random.append(new Date().getTime(), Math.random() * 10000);
+	      }, 500);
+	      
+	      function createTimeline() {
+		var chart = new SmoothieChart();
+		chart.addTimeSeries(random, { strokeStyle: 'rgba(0, 255, 0, 1)', fillStyle: 'rgba(0, 255, 0, 0.2)', lineWidth: 4 });
+		chart.streamTo(document.getElementById("chart1"), 500);
+	      }
+	    </script>
+    </head>
+
+    <body onload="createTimeline()">
+        <div id="title">
+            <h1>Robert 0.2</h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <a href="javascript:WebSocketTest()"><li>Run WebSocket</li></a>
+                <a href=""><li>something else</li></a>
+            </ul>
+        </div>
+        <div id="bumpers" class = "indicators" style="display:inline-block;">
+            <div id="lbump" class="led">left</div>
+            <div id="rbump" class="led">right</div>
+            <div id="lcliff" class="led">left</div>
+            <div id="rcliff" class="led">right</div>
+        </div>
+        <div id="sonars" style="display:inline-block;">
+            <div id="sonar1" class="bargraph">front</div>
+            <div id="sonar2" class="bargraph">left</div>
+            <div id="sonar3" class="bargraph">right</div>
+            <div id="sonar4" class="bargraph">back</div>
+        </div>
+	<div>
+            <canvas id="chart1" width="400" height="100"></canvas>
+	</div>
+        <div>
+          <p style="display:inline"><canvas id="ircamera" width="320" height="240"></canvas></p>
+          <p style="display:inline"><canvas id="map" width="320" height="240"></canvas></p>
+          <p style="display:inline"><canvas id="joystick" width="320" height="240"></canvas></p>
+        </div>
+        <div id="messages"></div>
+        <div id="footer">
+        This Webpage bought to you by Python, pyro, tornado and mjpgStreamer. And me.
+        <div>
+    </body>
+    <script type="text/javascript" src='www/javascript.js'></script>
+</html>
+

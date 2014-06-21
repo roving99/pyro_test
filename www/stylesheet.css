@@ -1,0 +1,110 @@
+
+body {
+    font-family:Verdana;
+    background-color:black;
+    }
+
+.bargraph {
+    background-color:#d0d0d0;
+    height:20px;
+    width:300px;
+    text-align:left;
+    margin:10px;
+    border-radius:10px;
+    font-family:Verdana;
+}
+
+.led {
+    height:20px;
+    width:50px;
+    border-radius:5px;
+    background-color:#d0d0d0;
+    margin:10px;
+    font-family:Verdana;
+    text-align:center;
+    }
+
+.indicators {
+    padding:10px;
+    border-radius:5px;
+    }
+
+#title {
+    background-color:#808080;
+    color:white;
+    padding:0px;
+    border-top-right-radius:10px;
+    border-top-left-radius:10px;
+    margin:0px;
+    }
+#menu {
+    background-color:#808080;
+    padding:0px;
+    }
+
+#menu li {
+    text-decoration:none;
+    display:inline;
+    background-color:#a0a0a0;
+    padding:5px;
+    border-radius:5px;
+    }
+
+#menu a {
+    text-decoration:none;
+    }
+
+#menu li:hover {
+    background-color:#c0c0c0;
+    }
+
+#footer {
+    background-color:#808080;
+    color:white;
+    padding:10px;
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+    margin:0px;
+    text-align:center;
+    }
+
+#messages {
+    margin:0px;
+    padding:10px;
+    background-color:#d0d0d0;
+    font-family:Verdana;
+    }
+    
+#sonars {
+    border-radius:5px;
+    background-color:#f0f0f0;
+    width:50%;
+    padding:10px;
+    }
+
+#bumpers {
+    border-radius:5px;
+    background-color:#f0f0f0;
+    }
+
+
+#camera {
+    border: solid 1px white;
+    margin: 5px;
+    }
+
+#ircamera {
+    border: solid 1px white;
+    margin: 5px;
+    }
+
+#map {
+    border: solid 1px white;
+    margin: 5px;
+    }
+
+#joystick {
+    border: solid 1px white;
+    margin: 5px;
+    }
+

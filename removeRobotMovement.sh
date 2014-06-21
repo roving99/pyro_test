@@ -1,0 +1,1 @@
+pyro-nsc remove robotmovement
